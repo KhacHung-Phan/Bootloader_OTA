@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+"application_ota\startup_stm32f103xb.o"
+"application_ota\main.o"
+"application_ota\stm32f1xx_it.o"
+"application_ota\stm32f1xx_hal_msp.o"
+"application_ota\stm32f1xx_hal_gpio_ex.o"
+"application_ota\stm32f1xx_hal.o"
+"application_ota\stm32f1xx_hal_rcc.o"
+"application_ota\stm32f1xx_hal_rcc_ex.o"
+"application_ota\stm32f1xx_hal_gpio.o"
+"application_ota\stm32f1xx_hal_dma.o"
+"application_ota\stm32f1xx_hal_cortex.o"
+"application_ota\stm32f1xx_hal_pwr.o"
+"application_ota\stm32f1xx_hal_flash.o"
+"application_ota\stm32f1xx_hal_flash_ex.o"
+"application_ota\stm32f1xx_hal_exti.o"
+"application_ota\system_stm32f1xx.o"
+--strict --scatter "Application_OTA\Application_OTA.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Application_OTA.map" -o Application_OTA\Application_OTA.axf
